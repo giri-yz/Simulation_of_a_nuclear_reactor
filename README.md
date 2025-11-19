@@ -146,7 +146,7 @@ App starts on:
 
 - **Hari Kishore R**
 - **Kapilesh C**
-- **Giri Karthick S **
+- **Giri Karthick S**
 
 Project submitted for **SEED Hackathon – PS-3: Autonomous Cyber Defense for Critical Infrastructure**
 
@@ -154,10 +154,8 @@ Project submitted for **SEED Hackathon – PS-3: Autonomous Cyber Defense for Cr
 
 ##  Future Improvements
 
-- Integrate ML drift-detection models (LSTM / Kalman)
 - Real-time alerting & ICS attack classifier
 - Containerized deployment (Docker + Kubernetes)
-- Exportable reactor logs for audits
 
 ---
 
