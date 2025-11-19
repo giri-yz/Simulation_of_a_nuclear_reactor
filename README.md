@@ -146,7 +146,7 @@ App starts on:
 
 - **Hari Kishore R**
 - **Kapilesh C**
-- **Giri Karthick S (yz)**
+- **Giri Karthick S **
 
 Project submitted for **SEED Hackathon – PS-3: Autonomous Cyber Defense for Critical Infrastructure**
 
