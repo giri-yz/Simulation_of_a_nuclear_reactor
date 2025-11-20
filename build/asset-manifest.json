@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Simulation_of_a_nuclear_reactor/static/css/main.74c3a7e5.css",
-    "main.js": "/Simulation_of_a_nuclear_reactor/static/js/main.ee80d69c.js",
-    "static/js/453.d54d2ad4.chunk.js": "/Simulation_of_a_nuclear_reactor/static/js/453.d54d2ad4.chunk.js",
-    "index.html": "/Simulation_of_a_nuclear_reactor/index.html",
-    "main.74c3a7e5.css.map": "/Simulation_of_a_nuclear_reactor/static/css/main.74c3a7e5.css.map",
-    "main.ee80d69c.js.map": "/Simulation_of_a_nuclear_reactor/static/js/main.ee80d69c.js.map",
-    "453.d54d2ad4.chunk.js.map": "/Simulation_of_a_nuclear_reactor/static/js/453.d54d2ad4.chunk.js.map"
+    "main.css": "/static/css/main.74c3a7e5.css",
+    "main.js": "/static/js/main.e29b5f1e.js",
+    "static/js/453.d54d2ad4.chunk.js": "/static/js/453.d54d2ad4.chunk.js",
+    "index.html": "/index.html",
+    "main.74c3a7e5.css.map": "/static/css/main.74c3a7e5.css.map",
+    "main.e29b5f1e.js.map": "/static/js/main.e29b5f1e.js.map",
+    "453.d54d2ad4.chunk.js.map": "/static/js/453.d54d2ad4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74c3a7e5.css",
-    "static/js/main.ee80d69c.js"
+    "static/js/main.e29b5f1e.js"
   ]
 }
