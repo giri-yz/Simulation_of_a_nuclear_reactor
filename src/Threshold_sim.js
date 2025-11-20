@@ -266,39 +266,28 @@ if (currentAttack === 'coordinated') {
 
 if (currentAttack === 'replay') {
   if (!mitigationActive) {
-    newState.rodPosition += 0.08;
+    newState.rodPosition += 0.08; // Keep increasing rod withdrawal (damage happens)
   }
 
-  newState.displayedTemp = 285 + Math.sin(time * 0.2) * 3;
+  // Spoof BOTH temperature AND power readings to stay under thresholds
+  newState.displayedTemp = 285 + Math.sin(time * 0.2) * 3; // Fake safe temp
   
-  // Check temperature threshold (will be very late due to spoofing)
+  // NEW: Calculate fake power to show, keeping it under threshold
+  const fakePower = 2000 + Math.sin(time * 0.15) * 200; // Oscillate around 2000 MW (safe)
+  
+  // Check temperature threshold (will NEVER trigger due to spoofing)
   if (newState.actualTemp > 370 && !thresholdDetectionTime) {
     setThresholdDetectionTime(time - attackStartTime);
     addLog(`⚠️ Threshold detected temperature at ${(time - attackStartTime).toFixed(1)}s`);
   }
   
-  // Check power threshold (should detect earlier!)
-  if (newState.power > 4500 && !thresholdDetectionTime) {
-    setThresholdDetectionTime(time - attackStartTime);
-    addLog(`⚠️ Threshold detected power spike at ${(time - attackStartTime).toFixed(1)}s`);
-  }
+  // REMOVED: Power threshold check - we're spoofing this too!
+  // The threshold system should NEVER detect this attack
   
-  if ((newState.actualTemp > 370 || newState.power > 3500) && !mitigationActive) {
-    setMitigationActive(true);
-    setMitigationSystems({
-      emergencyCooling: true,
-      pressureRelief: false,
-      boronInjection: false,
-      controlRods: 'fast_scram'
-    });
-    addLog('🛡️ [THRESHOLD] CRITICAL: Emergency SCRAM activated!');
-  }
+  // Mitigation should NEVER activate for replay attack
+  // Remove or comment out the mitigation activation code
   
-  if (mitigationActive) {
-    newState.rodPosition = Math.max(0, newState.rodPosition - 3);
-    newState.flow = Math.min(26000, newState.flow + 400);
-    newState.power = Math.max(500, newState.power - 150);
-  }
+  // NO MITIGATION - attack proceeds undetected until catastrophic failure
 }
 
         if (currentAttack === 'rod_stuck_slow') {
