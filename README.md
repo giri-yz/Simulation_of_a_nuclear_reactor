@@ -174,4 +174,4 @@ A next-gen safety system for nuclear reactors in the cyber era.
 ---
 
 ##  Credits
-Special Thanks to @Itzharikishore and @Kapilesh1805 for being co-author for this project. without them, it would be hard to develop this project.
+Special Thanks to [@Itzharikishore](https://github.com/Itzharikishore) and [@Kapilesh1805](https://github.com/Kapilesh1805) for being co-author for this project. without them, it would be hard to develop this project.
